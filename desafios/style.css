@@ -1,0 +1,28 @@
+body {
+    width: 50vw;
+    margin: auto;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#Destino1 {
+    color:#2C3E50 ;
+    background-color:#ECF0F1 ;
+}
+#paris1 {
+    color:#E74C3C ;
+    background-color:#F9EBEA ;
+}
+
+#maravilhas1 {
+    color:#30AE60 ;
+    background-color:#E9F7EF ;
+}
+
+#cidades {
+    color:#F39C11 ;
+    background-color:#FFF3E6 ;
+}

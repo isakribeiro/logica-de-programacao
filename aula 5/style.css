@@ -1,0 +1,35 @@
+main {
+    width: 50vw;
+    margin: auto;
+}
+
+#titulo1 {
+   color:rgb(202, 21, 21) ;
+   background-color: rgb(26, 113, 235) ;
+}
+
+.texto-titulo1 {
+    color: cadetblue;
+    background-color: rgb(52, 58, 117);
+
+}
+#titulo2 {
+    color:rgb(0, 0, 255);
+    background-color: rgb(127, 140, 255);
+}
+
+.texto-titulo2 {
+
+color: rgba(182, 189, 117, 0.801);
+background-color: burlywood;
+}
+
+#titulo3 {
+    color: rgba(62, 59, 187, 0.815);
+    background-color: rgba(94, 180, 133, 0.664);
+}
+
+.texto-titulo3 {
+    color: rgb(114, 77, 77);
+    background-color: cornflowerblue;
+}
