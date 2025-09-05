@@ -1,0 +1,54 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+}
+
+main {
+    background-color: #fff8f0;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 32px 24px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    transition: box-shadow 0.3s;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+

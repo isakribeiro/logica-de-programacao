@@ -11,7 +11,7 @@
     --cor-main: #fff ;
     --letras-letras-link: #000000;
     --cor-botao-cabeçalho:hwb(0 76% 13% / 0.49);
-    --cor-rodape: #0a0909a8;
+    --cor-rodape: #0a0909f5;
 }
 
 header {
@@ -30,6 +30,7 @@ header h1 {
 nav { 
     margin-top: 20px;
     margin-top: 16px;
+    
 }
 
 nav a{ 
@@ -49,9 +50,9 @@ nav a:hover {
 footer{
     width:100w ;
     padding:20px ;
-    text-align:center ;
+    text-align:center;
     background-color:var(--cor-rodape) ;
-    color:var(--letras-letras-link);
+    color:var(--cor-rodape);
     position:relative :
     bottom:0 ;
 }

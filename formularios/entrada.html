@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h2>formulario de cadastro</h2>
+        <form action="">
+            <label for="nome">nome:</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="sobrenome">sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+
+            <label for="data_nascimento">data de nascimento:</label>
+            <input type="date" name="data_nascimento" id="data_nascimento">
+
+            <label for="cpf">cpf:</label>
+            <input type="text" name="cpf" id="cpf">
+
+            <label for="email">email:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha">
+
+            <label for="estado">estado:</label>
+            <input type="text" name="estado" id="estado">
+
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="cep" maxlength="8" oninput="updateCepCount(); buscarEndereco();">
+            <span id="cep-count"></span>
+            <script>
+            function updateCepCount() {
+                document.getElementById('cep-count').textContent = document.getElementById('cep').value.length + '/8';
+            }
+
+            function buscarEndereco() {
+                const cep = document.getElementById('cep').value;
+                if (cep.length === 8) {
+                    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (!data.erro) {
+                                document.getElementById('rua').value = data.logradouro || '';
+                                document.getElementById('cidade').value = data.localidade || '';
+                                document.getElementById('estado').value = data.uf || '';
+                            }
+                        });
+                }
+            }
+            </script>
+
+            <label for="rua"></label>
+            <input type="text" name="rua" id="rua">
+            
+            <label for="numero"></label>
+            <input type="text" name="numero" id="numero">
+            
+        
+            
+            <label for="cidade"></label>
+            <input type="text" name="cidade" id="cidade">
+
+            <label for="estado"></label>
+            <input type="text" name="estado" id="estado">
+            <select name="estado" id="estado">
+                <option value="SP">São paulo</option>
+                <option value="RJ">Rio de janeiro</option>
+                <option value="BA">Bahia</option>
+                <option value="MG">Minas gerais</option>
+                <option value="ES">Espirito santo</option>
+
+            <div class="buttons">
+                <button type="submit">enviar</button>
+                 <button type="submit">limpar</button>
+
+            </div>
+                
+               
+                
+
+            </select>
+
+        </form>
+    </main>
+    
+</body>
+</html>
